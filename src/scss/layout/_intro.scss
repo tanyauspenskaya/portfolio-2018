@@ -1,0 +1,13 @@
+.intro {
+  height: 100vh;
+  background: mediumpurple;
+
+  &__header {
+    color: violet;
+  }
+
+  &__scroll-btn {
+    position: absolute;
+    z-index: 200;
+  }
+}

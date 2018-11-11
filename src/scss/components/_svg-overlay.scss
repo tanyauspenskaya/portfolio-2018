@@ -1,0 +1,21 @@
+.shape-overlays {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0; 
+  left: 0;
+
+  &__path--first {
+    fill: $path-fill-1;
+  }
+  &__path--second {
+    fill: $path-fill-2;
+  }
+  &__path--third {
+    fill: $path-fill-3;
+  }
+
+  &.is-opened {
+    pointer-events: auto;
+  }
+}
