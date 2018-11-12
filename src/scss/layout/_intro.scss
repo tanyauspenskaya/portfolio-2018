@@ -1,9 +1,18 @@
 .intro {
   height: 100vh;
-  background: mediumpurple;
+  background: linear-gradient(to top, $intro-bg-btm, $intro-bg-top);
+  color: $intro-txt-pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &__header {
-    color: violet;
+  &__content {
+    display: block;
+    text-align: center;
+  }
+
+  &__header-name {
+    display: block;
   }
 
   &__scroll-btn {

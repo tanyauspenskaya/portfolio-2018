@@ -20,7 +20,8 @@ class ShapeOverlays {
       this.delayPointsArray[i] = Math.random() * this.delayPointsMax;
     }
     if (this.isOpened === false) {
-      this.open();
+      //this.open();
+      this.close();
     } else {
       this.close();
     }
@@ -38,6 +39,10 @@ class ShapeOverlays {
     //this.el.classList.remove('is-opened');
     this.timeStart = Date.now();
     this.renderLoop();
+
+    // document.querySelector('#cube').scrollIntoView({	
+    //   behavior: 'smooth'	
+    // });	
   }
 
   updatePath(time) {
@@ -78,6 +83,7 @@ class ShapeOverlays {
     }
     else {
       this.isAnimating = false;
+      //this.el.style.top = '-100%';
     }
   }
 }
@@ -86,7 +92,7 @@ class ShapeOverlays {
 
 
 (function() {
-  const btn = document.querySelector('.intro__scroll');
+  const btn = document.querySelector('.intro__scroll-btn');
   const elOverlay = document.querySelector('.shape-overlays');
   const overlay = new ShapeOverlays(elOverlay);
 
@@ -97,8 +103,6 @@ class ShapeOverlays {
     }
     overlay.toggle();
   });
-
-  console.log(overlay);
 }());
 
 
