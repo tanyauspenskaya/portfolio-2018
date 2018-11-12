@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
   <title>Portfolio of Tatiana Uspenskaia, a front end developer from Toronto</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 <body>
 
@@ -22,9 +22,7 @@
         <a href="#cube" class="intro__scroll-btn">scroll</a>
       </div>
       <div class="intro__cube">
-        <svg class="intro__cube-img">
-          <use href=""></use>
-        </svg>
+        <img src="<%= require('./img/cube-pink.svg') %>" class="intro__cube-img">
       </div>
     </div>
   </section>
@@ -50,6 +48,15 @@
   </svg>
 
   <section class="cube" id="cube">
+    <div class="cube__prlx cube__prlx--pink">
+      <img src="<%= require('./img/cube-pink.svg') %>" class="intro__cube-img">
+    </div>
+    <div class="cube__prlx cube__prlx--fandango">
+      <img src="<%= require('./img/cube-fandango.svg') %>" class="intro__cube-img">
+    </div>
+    <div class="cube__prlx cube__prlx--grape">
+      <img src="<%= require('./img/cube-grape.svg') %>" class="intro__cube-img">
+    </div>
     cube img
     cube img
     cube img
