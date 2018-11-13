@@ -5,9 +5,32 @@
   padding: 0;
   box-sizing: inherit;
 }
+
 html {
-  font-size: 100%; 
+  font-size: 62.5%;
 }
+
 body {
   box-sizing: border-box;
+}
+
+::selection {
+  background: $motto-bg-top;
+  color: $color-white;
+}
+::-moz-selection {
+  background: $motto-bg-top;
+  color: $color-white;
+}
+
+a {
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
 }

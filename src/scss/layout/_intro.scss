@@ -7,16 +7,52 @@
   align-items: center;
 
   &__content {
-    display: block;
     text-align: center;
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: column wrap;
+    overflow: hidden;
   }
 
-  &__header-name {
-    display: block;
+  &__header {
+    color: $color-pink-light;
+
+    &-name {
+      display: block;
+      text-shadow: 2px 4px 3px rgba($cube-bg-top, .7);
+    }
   }
 
-  &__scroll-btn {
-    position: absolute;
-    z-index: 200;
+  &__scroll {
+
+    &-btn {
+      position: absolute;
+      z-index: 200;
+      width: 1em;
+      height: 1.8em;
+      border: 1px solid $color-pink-light;
+      border-radius: .5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &-bar {
+      display: block;
+      height: .65em;
+      width: 2px;
+      background: $color-pink-light;
+      box-shadow: 1px 2px 3px rgba($cube-bg-top, .7);
+      animation: float 4s ease-in-out infinite;
+    }
+  }
+  
+
+  &__cube {
+    width: 60vh;
+    transform: translateY(62%);
   }
 }

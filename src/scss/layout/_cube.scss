@@ -2,6 +2,10 @@
   min-height: 100vh;
   background: linear-gradient(to top, $cube-bg-btm, $cube-bg-mdl 60%, $cube-bg-top);
   white-space: pre-wrap;
-  font-size: 4vw;
   color: $cube-txt-white;
+
+  &__prlx {
+    width: 60vh;
+    margin: 0 auto;
+  }
 }

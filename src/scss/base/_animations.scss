@@ -1,0 +1,11 @@
+@keyframes float {
+	0% {
+		transform: translatey(.1em);
+	}
+	50% {
+		transform: translatey(-.35em);
+	}
+  100% {
+		transform: translatey(.1em);
+	}
+}

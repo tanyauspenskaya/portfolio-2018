@@ -1,15 +1,48 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700,800|Merriweather:300,400,700,900|Playfair+Display:400,700,900');
+// @import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700,800|Merriweather:300,400,700,900|Playfair+Display:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Abhaya+Libre|Abril+Fatface|Alice|Alike|Codystar|Glegoo|IBM+Plex+Serif|Lekton|Nixie+One|Pavanam|Playfair+Display+SC|Prata|Raleway+Dots|Scope+One|Sunflower:300|Tinos|Vidaloka');
 
 body {
   font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Nixie One', cursive;
   font-weight: 300;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
 }
+
 .intro {
+  font-size: 2.1vw;
+
   &__header {
     font-weight: 300;
+    font-size: 1em;
+    line-height: $base-line-height * .85;
+
 
     &-name {
+      color: $motto-bg-top;
+
+      // to be removed
+      font-family: 'Abril Fatface', cursive;
+      font-family: 'Tinos', serif;
+      font-family: 'Sunflower', sans-serif;
+      font-family: 'Playfair Display SC', serif;
+      font-family: 'Vidaloka', serif;
+      font-family: 'Prata', serif;
+      font-family: 'Glegoo', serif;
+      font-family: 'Alice', serif;
+      font-family: 'Lekton', sans-serif;
+      font-family: 'Nixie One', cursive;
+      font-family: 'Alike', serif;
+      font-family: 'Pavanam', sans-serif;
+      font-family: 'Codystar', cursive;
+      font-family: 'Scope One', serif;
+
       font-family: 'Playfair Display', serif;
+      font-family: 'IBM Plex Serif', serif;
+      font-family: 'Raleway Dots', cursive;
+      font-family: 'Abhaya Libre', serif;
+      font-family: 'Alice', serif;
+      font-size: 4em;
     }
   }
 }
