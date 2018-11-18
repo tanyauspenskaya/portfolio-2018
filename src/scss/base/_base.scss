@@ -24,6 +24,9 @@ body {
 }
 
 a {
+  cursor: pointer;
+  color: inherit;
+  
   &:link,
   &:visited {
     text-decoration: none;

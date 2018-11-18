@@ -1,5 +1,11 @@
 .contact {
-  height: 40vh;
   background-color: $color-green;
   color: $color-blue-dark;
+  text-align: center;
+
+  &__paragraph {
+    &--copyright {
+      padding: 1.5em;
+    }
+  }
 }

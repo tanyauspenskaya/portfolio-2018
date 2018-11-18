@@ -66,30 +66,8 @@
     <div class="cube__prlx cube__prlx--grape">
       <img src="<%= require('./img/cube-grape.svg') %>" class="intro__cube-img">
     </div>
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
-    cube img
+    <p class="cube__paragraph">I have a serious passion for building</p>
+    <h3 class="cube__title">beautiful digital experiences</h3>
     <!-- <div class="cube__scroll">
       <a href="#motto" class="cube__scroll-btn">scroll</a>
     </div> -->
@@ -116,12 +94,43 @@
   </svg> -->
 
   <section class="work" id="work">
-    work content
+    <h3 class="work__title">how I work</h3>
+    <p class="work__paragraph">Reaching high standards of code quality through progressive development methodologies is my highest priority</p>
+
+    <div class="laptop-prlx">
+      <div class="laptop-prlx__item">
+        <img src="<%= require('./img/laptop.svg') %>" alt="" class="laptop-prlx__img">
+      </div>
+      <div class="laptop-prlx__item">
+        <img src="<%= require('./img/laptop-code.svg') %>" alt="" class="laptop-prlx__img">
+      </div>
+    </div>
+
+    <h3 class="work__title">what interests me</h3>
+    <ul class="work__list">
+      <li class="work__list-item">Designing and developing structural code</li>
+      <li class="work__list-item">Working with cutting-edge technologies</li>
+      <li class="work__list-item">Building responsive cross browser layouts that work on any device</li>
+    </ul>
+
+    <h3 class="work__title"><a href="">recent work</a></h3>
   </section>
 
-  <section class="contact">
-    contact
-  </section>
+  <footer class="contact">
+    <h3 class="contact__title">get in touch</h3>
+    <ul class="contact__list social">
+      <li class="contact__list-item social__item">
+        <a href="" class="social__link social__link--email"></a>
+      </li>
+      <li class="contact__list-item social__item">
+        <a href="" class="social__link social__link--linkedin"></a>
+      </li>
+      <li class="contact__list-item social__item">
+        <a href="" class="social__link social__link--github"></a>
+      </li>
+    </ul>
+    <p class="contact__paragraph contact__paragraph--copyright">© 2018 Tatiana Uspenskaia | Totonto, Ontario</p>
+  </footer>
   
 
   <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
