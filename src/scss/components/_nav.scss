@@ -1,0 +1,22 @@
+.nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 4rem;
+  color: $color-white;
+
+  &__list {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__list-item {
+    margin: .8rem auto;
+  }
+
+  &__link {
+    color: inherit;
+  }
+}

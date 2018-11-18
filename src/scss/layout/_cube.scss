@@ -1,8 +1,10 @@
 .cube {
   min-height: 100vh;
-  background: linear-gradient(to top, $cube-bg-btm, $cube-bg-mdl 60%, $cube-bg-top);
+  background: rgb(143,61,175);
+  background: radial-gradient(circle, $color-pink 0%, $color-purple-lighter 30%, $color-purple-darker 60%, $color-blue-dark 100%);
+  color: $color-white;
+
   white-space: pre-wrap;
-  color: $cube-txt-white;
 
   &__prlx {
     width: 60vh;
