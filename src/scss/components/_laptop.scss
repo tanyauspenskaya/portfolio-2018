@@ -1,0 +1,11 @@
+.laptop {
+  &-prlx {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+
+    &__item:last-of-type img {
+      margin-top: 1.7vw;
+    }
+  }
+}

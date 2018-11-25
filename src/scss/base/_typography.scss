@@ -38,3 +38,11 @@ h3 {
     }
   }
 }
+
+.contact {
+  &__paragraph {
+    &--copyright {
+      font-size: .6em;
+    }
+  }
+}

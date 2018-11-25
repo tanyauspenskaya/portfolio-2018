@@ -57,20 +57,19 @@
   </svg>
 
   <section class="cube" id="cube">
-    <div class="cube__prlx cube__prlx--pink">
-      <img src="<%= require('./img/cube-green.svg') %>" class="intro__cube-img">
+
+    <div class="rellax cube__prlx cube__prlx--pink" data-rellax-speed="2">
+      <img src="<%= require('./img/cube-green.svg') %>" class="cube__prlx-img">
     </div>
-    <div class="cube__prlx cube__prlx--fandango">
-      <img src="<%= require('./img/cube-fandango.svg') %>" class="intro__cube-img">
+    <div class="rellax cube__prlx cube__prlx--fandango" data-rellax-speed="0">
+      <img src="<%= require('./img/cube-fandango.svg') %>" class="cube__prlx-img">
     </div>
-    <div class="cube__prlx cube__prlx--grape">
-      <img src="<%= require('./img/cube-grape.svg') %>" class="intro__cube-img">
+    <div class="rellax cube__prlx cube__prlx--grape" data-rellax-speed="-2">
+      <img src="<%= require('./img/cube-grape.svg') %>" class="cube__prlx-img">
     </div>
+
     <p class="cube__paragraph">I have a serious passion for building</p>
     <h3 class="cube__title">beautiful digital experiences</h3>
-    <!-- <div class="cube__scroll">
-      <a href="#motto" class="cube__scroll-btn">scroll</a>
-    </div> -->
   </section>
 
   <!-- <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -132,7 +131,6 @@
     <p class="contact__paragraph contact__paragraph--copyright">© 2018 Tatiana Uspenskaia | Totonto, Ontario</p>
   </footer>
   
-
   <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
 </html>

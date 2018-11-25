@@ -1,4 +1,5 @@
 import './scss/main.scss';
+import ScrollReveal from 'scrollreveal';
 
 class ShapeOverlays {
   constructor(el) {
@@ -103,6 +104,20 @@ class ShapeOverlays {
     }
     overlay.toggle();
   });
+
+  ScrollReveal().reveal('.cube__prlx--pink', {
+    delay: 1000,
+    // reset: true,
+  });
+  ScrollReveal().reveal('.cube__prlx--fandango', {
+    delay: 1500,
+    //reset: true,
+  });
+  ScrollReveal().reveal('.cube__prlx--grape', {
+    delay: 2000,
+    //reset: true,
+  });
+  
 }());
 
 

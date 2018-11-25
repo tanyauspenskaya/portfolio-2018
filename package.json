@@ -25,5 +25,8 @@
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",
     "webpack-md5-hash": "0.0.6"
+  },
+  "dependencies": {
+    "scrollreveal": "^4.0.5"
   }
 }
