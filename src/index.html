@@ -56,16 +56,20 @@
     <path class="shape-overlays__path shape-overlays__path--third"></path>
   </svg>
 
-  <section class="cube" id="cube">
 
-    <div class="rellax cube__prlx cube__prlx--pink" data-rellax-speed="2">
-      <img src="<%= require('./img/cube-green.svg') %>" class="cube__prlx-img">
-    </div>
-    <div class="rellax cube__prlx cube__prlx--fandango" data-rellax-speed="0">
-      <img src="<%= require('./img/cube-fandango.svg') %>" class="cube__prlx-img">
-    </div>
-    <div class="rellax cube__prlx cube__prlx--grape" data-rellax-speed="-2">
-      <img src="<%= require('./img/cube-grape.svg') %>" class="cube__prlx-img">
+  <section class="cube" id="cube">
+    <div class="cube__anchor"></div>
+    
+    <div class="cube__box">
+      <div class="cube__prlx cube__prlx--pink" data-ty="20">
+        <img src="<%= require('./img/cube-green.svg') %>" class="cube__prlx-img">
+      </div>
+      <div class="cube__prlx cube__prlx--fandango" data-ty="80">
+        <img src="<%= require('./img/cube-fandango.svg') %>" class="cube__prlx-img">
+      </div>
+      <div class="cube__prlx cube__prlx--grape" data-ty="140">
+        <img src="<%= require('./img/cube-grape.svg') %>" class="cube__prlx-img">
+      </div>
     </div>
 
     <p class="cube__paragraph">I have a serious passion for building</p>

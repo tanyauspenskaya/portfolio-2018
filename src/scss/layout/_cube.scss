@@ -1,16 +1,21 @@
 .cube {
-  // min-height: 100vh;
   background: rgb(143,61,175);
   background: radial-gradient(circle, $color-pink 0%, $color-purple-lighter 30%, $color-purple-darker 60%, $color-blue-dark 100%);
   color: $color-white;
   padding: 10vw;
+  text-align: center;
+
+  &__box {
+    height: 100vh;
+  }
 
   &__prlx {
     width: 60vh;
-    //width: 40vw;
-    //width: 500px;
+    //width: 44vw;
     margin: 0 auto;
     position: relative;
+    transform: translateY(var(--ty));
+	  will-change: transform;
 
     &-img {
       -webkit-filter: drop-shadow(0 12px 7px rgba(30,14,94,.7));      
@@ -18,20 +23,24 @@
     }
 
     &--pink {
-      //transform: translate3d(0, 0, 0);
        z-index: 3;
     }
 
     &--fandango {
-      //transform: translate3d(0, -70%, 0);
-      margin-top: -28.2%;
+      margin-top: -32vh;
+      //margin-top: -23.5vw;
       z-index: 2;
     }
 
     &--grape {
-      //transform: translate3d(0, -140%, 0);
-      margin-top: -28.2%;
+      margin-top: -32vh;
+      //margin-top: -23.5vw;
       z-index: 1;
     }
   }
+}
+
+.test {
+  transform: translateY(var(--ty));
+	will-change: transform;
 }

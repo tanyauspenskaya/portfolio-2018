@@ -1,5 +1,5 @@
 import './scss/main.scss';
-import ScrollReveal from 'scrollreveal';
+import * as basicScroll from 'basicscroll';
 
 class ShapeOverlays {
   constructor(el) {
@@ -93,6 +93,8 @@ class ShapeOverlays {
 
 
 (function() {
+
+  /* svg animation */
   const btn = document.querySelector('.intro__scroll-btn');
   const elOverlay = document.querySelector('.shape-overlays');
   const overlay = new ShapeOverlays(elOverlay);
@@ -105,18 +107,32 @@ class ShapeOverlays {
     overlay.toggle();
   });
 
-  ScrollReveal().reveal('.cube__prlx--pink', {
-    delay: 1000,
-    // reset: true,
+  /* cube parallax */
+  const instances = [];
+  const anchor = document.querySelector('.cube__anchor');
+
+  document.querySelectorAll('.cube__prlx').forEach((elem) => {
+
+    const ty = elem.getAttribute('data-ty') + 'vh';
+  
+    // Crate an instance for the current element and store the instance in an array.
+    // Start the animation later using the instances from the array.
+    instances.push(basicScroll.create({
+      elem: anchor,
+      from: 'top-bottom',
+      to: 'top-top',
+      direct: elem,
+      props: {
+        '--ty': {
+          from: ty,
+          to: '0'
+        }
+      }
+    }))
+  
   });
-  ScrollReveal().reveal('.cube__prlx--fandango', {
-    delay: 1500,
-    //reset: true,
-  });
-  ScrollReveal().reveal('.cube__prlx--grape', {
-    delay: 2000,
-    //reset: true,
-  });
+  
+  instances.forEach((instance) => instance.start());
   
 }());
 
