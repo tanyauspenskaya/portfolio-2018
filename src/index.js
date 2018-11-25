@@ -94,7 +94,7 @@ class ShapeOverlays {
 
 (function() {
 
-  /* svg animation */
+  /* --- svg animation --- */
   const btn = document.querySelector('.intro__scroll-btn');
   const elOverlay = document.querySelector('.shape-overlays');
   const overlay = new ShapeOverlays(elOverlay);
@@ -106,17 +106,18 @@ class ShapeOverlays {
     }
     overlay.toggle();
   });
+  /* --- end svg animation --- */
 
-  /* cube parallax */
+  /* --- parallax --- */
   const instances = [];
   const anchor = document.querySelector('.cube__anchor');
+  const anchorLaptop = document.querySelector('.laptop__anchor');
 
+  /* cube parallax */
   document.querySelectorAll('.cube__prlx').forEach((elem) => {
 
     const ty = elem.getAttribute('data-ty') + 'vh';
   
-    // Crate an instance for the current element and store the instance in an array.
-    // Start the animation later using the instances from the array.
     instances.push(basicScroll.create({
       elem: anchor,
       from: 'top-bottom',
@@ -132,7 +133,33 @@ class ShapeOverlays {
   
   });
   
+  /* laptop parallax */
+  document.querySelectorAll('.laptop__prlx').forEach((elem) => {
+
+    const tx = elem.getAttribute('data-tx') + 'vh';
+    const ty = elem.getAttribute('data-ty') + 'vh';
+  
+    instances.push(basicScroll.create({
+      elem: anchorLaptop,
+      from: 'middle-middle',
+      to: 'top-top',
+      direct: elem,
+      props: {
+        '--tx': {
+          from: tx,
+          to: '0'
+        },
+        '--ty': {
+          from: ty,
+          to: '0'
+        }
+      }
+    }))
+  
+  });
+
   instances.forEach((instance) => instance.start());
+  /* --- end parallax --- */
   
 }());
 

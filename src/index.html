@@ -39,16 +39,20 @@
   <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
     <defs>
         <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stop-color="#00c99b"/>
-          <stop offset="100%" stop-color="#ff0ea1"/>
+          <stop offset="0%"   stop-color="#8f3daf"/>
+          <stop offset="40%" stop-color="#4e30b0"/>
+          <stop offset="60%" stop-color="#3f2799"/>
+          <stop offset="100%" stop-color="#3f2799"/>
         </linearGradient>
         <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stop-color="#ffd392"/>
-          <stop offset="100%" stop-color="#ff3898"/>
-        </linearGradient>
+            <stop offset="0%"   stop-color="#4AFFBF"/>
+            <stop offset="100%" stop-color="#ff0ea1"/>
+          </linearGradient>
         <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stop-color="#733D73"/>
-          <stop offset="100%" stop-color="#37004d"/>
+          <stop offset="0%"   stop-color="#1e0e5e"/>
+          <stop offset="40%" stop-color="#3f2799"/>
+          <stop offset="60%"   stop-color="#4e30b0"/>
+          <stop offset="100%" stop-color="#8f3daf"/>
         </linearGradient>
       </defs>
     <path class="shape-overlays__path shape-overlays__path--first"></path>
@@ -100,12 +104,13 @@
     <h3 class="work__title">how I work</h3>
     <p class="work__paragraph">Reaching high standards of code quality through progressive development methodologies is my highest priority</p>
 
-    <div class="laptop-prlx">
-      <div class="laptop-prlx__item">
-        <img src="<%= require('./img/laptop.svg') %>" alt="" class="laptop-prlx__img">
+    <div class="laptop__anchor"></div>
+    <div class="laptop__box">
+      <div class="laptop__prlx laptop__prlx--device" data-tx="-33" data-ty="-14">
+        <img src="<%= require('./img/laptop.svg') %>" alt="" class="laptop__img">
       </div>
-      <div class="laptop-prlx__item">
-        <img src="<%= require('./img/laptop-code.svg') %>" alt="" class="laptop-prlx__img">
+      <div class="laptop__prlx laptop__prlx--code" data-tx="33" data-ty="-14">
+        <img src="<%= require('./img/laptop-code.svg') %>" alt="" class="laptop__img">
       </div>
     </div>
 
@@ -116,20 +121,20 @@
       <li class="work__list-item">Building responsive cross browser layouts that work on any device</li>
     </ul>
 
-    <h3 class="work__title"><a href="">recent work</a></h3>
+    <h3 class="work__title"><a href="https://timsop.in/" target="_blank">recent work</a></h3>
   </section>
 
   <footer class="contact">
     <h3 class="contact__title">get in touch</h3>
     <ul class="contact__list social">
       <li class="contact__list-item social__item">
-        <a href="" class="social__link social__link--email"></a>
+        <a href="mailto:tanyauspenskaya@gmail.com" class="social__link social__link--email"></a>
       </li>
       <li class="contact__list-item social__item">
-        <a href="" class="social__link social__link--linkedin"></a>
+        <a href="https://www.linkedin.com/in/tatianauspenskaia/" class="social__link social__link--linkedin" target="_blank"></a>
       </li>
       <li class="contact__list-item social__item">
-        <a href="" class="social__link social__link--github"></a>
+        <a href="https://github.com/tanyauspenskaya" class="social__link social__link--github" target="_blank"></a>
       </li>
     </ul>
     <p class="contact__paragraph contact__paragraph--copyright">© 2018 Tatiana Uspenskaia | Totonto, Ontario</p>
