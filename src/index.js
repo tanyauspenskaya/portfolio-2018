@@ -101,6 +101,26 @@ class ShapeOverlays {
   });
   /* --- end svg animation --- */
 
+  /* --- active menu --- */
+  const sectionArr = document.querySelectorAll('.section');
+  const sectionObj = {};
+  let i = 0;
+
+  Array.prototype.forEach.call(sectionArr, function(item) {
+    sectionObj[item.id] = item.offsetTop;
+  });
+
+  window.onscroll = function() {
+    const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+    for (i in sectionObj) {
+      if (sectionObj[i] <= scrollPosition) {
+        document.querySelector('.active').setAttribute('class', 'nav__link');
+        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'nav__link active');
+      }
+    }
+  };
+  /* --- end active menu --- */
+
   /* --- parallax --- */
   const instances = [];
   const anchor = document.querySelector('.cube__anchor');

@@ -9,3 +9,23 @@
 		transform: translatey(.1em);
 	}
 }
+
+@keyframes cb-projectbar-item-letter-in {
+	0% {
+    max-width: 100%;
+    background: #fff;
+	}
+	100% {
+    max-width: 100%;
+    background: 0 0;
+	}
+}
+
+@keyframes cb-projectbar-item-letter-out {
+	0% {
+    max-width: 100%;
+	}
+	100% {
+    max-width: 0%;
+	}
+}
