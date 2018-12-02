@@ -4,7 +4,11 @@
   position: fixed;
   top: 0; 
   left: 0;
-  z-index: 100;
+  z-index: -100;
+
+  &.is-opened {
+    z-index: 100;
+  }
 
   &__path--first {
     fill: $path-fill-1;

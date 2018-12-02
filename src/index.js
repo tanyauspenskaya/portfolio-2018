@@ -13,43 +13,37 @@ class ShapeOverlays {
     this.timeStart = Date.now();
     this.isOpened = false;
     this.isAnimating = false;
+    this.scrollTop = false;
   }
 
-  toggle() {
+  animate() {
     this.isAnimating = true;
     for (var i = 0; i < this.numPoints; i++) {
       this.delayPointsArray[i] = Math.random() * this.delayPointsMax;
     }
-    if (this.isOpened === false) {
-      //this.open();
+    if (this.scrollTop === false) {
       this.close();
     } else {
-      this.close();
+      this.open();
     }
   }
 
   open() {
     this.isOpened = true;
-    //this.el.classList.add('is-opened');
     this.timeStart = Date.now();
     this.renderLoop();
   }
 
   close() {
     this.isOpened = false;
-    //this.el.classList.remove('is-opened');
     this.timeStart = Date.now();
     this.renderLoop();
-
-    // document.querySelector('#cube').scrollIntoView({	
-    //   behavior: 'smooth'	
-    // });	
   }
 
   updatePath(time) {
     const points = [];
     for (var i = 0; i < this.numPoints; i++) {
-      points[i] = (1 - ease.cubicInOut(Math.min(Math.max(time - this.delayPointsArray[i], 0) / this.duration, 1))) * 100
+      points[i] = (1 - ease.cubicInOut(Math.min(Math.max(time - this.delayPointsArray[i], 0) / this.duration, 1))) * 100;
     }
 
     let str = '';
@@ -76,15 +70,15 @@ class ShapeOverlays {
   }
   
   renderLoop() {
+    this.el.classList.add('is-opened');
     this.render();
     if (Date.now() - this.timeStart < this.duration + this.delayPerPath * (this.path.length - 1) + this.delayPointsMax) {
       requestAnimationFrame(() => {
         this.renderLoop();
       });
-    }
-    else {
+    } else {
       this.isAnimating = false;
-      //this.el.style.top = '-100%';
+      this.el.classList.remove('is-opened');
     }
   }
 }
@@ -100,11 +94,10 @@ class ShapeOverlays {
   const overlay = new ShapeOverlays(elOverlay);
 
   btn.addEventListener('click', (e) => {
-    //console.log(e.target);
     if (overlay.isAnimating) {
       return false;
     }
-    overlay.toggle();
+    overlay.animate();
   });
   /* --- end svg animation --- */
 

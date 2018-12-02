@@ -23,12 +23,10 @@ h3 {
 }
 
 .intro {
-
   &__header {
     font-weight: inherit;
     font-size: 1em;
     line-height: $base-line-height * .95;
-
 
     &-name {
       font-family: 'Encode Sans Semi Condensed', sans-serif;

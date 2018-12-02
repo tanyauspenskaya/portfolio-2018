@@ -1,9 +1,4 @@
 .cube {
-  background: rgb(143,61,175);
-  background: radial-gradient(circle, $color-pink 0%, $color-purple-lighter 30%, $color-purple-darker 60%, $color-blue-dark 100%);
-  color: $color-white;
-  padding: 10vw;
-  text-align: center;
 
   &__box {
     height: 90vh;
@@ -36,10 +31,7 @@
       //margin-top: -23.5vw;
       z-index: 1;
     }
+    
   }
-}
 
-.test {
-  transform: translateY(var(--ty));
-	will-change: transform;
 }
