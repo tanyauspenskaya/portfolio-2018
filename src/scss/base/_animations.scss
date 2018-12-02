@@ -5,27 +5,27 @@
 	50% {
 		transform: translatey(-.35em);
 	}
-  100% {
+  	100% {
 		transform: translatey(.1em);
 	}
 }
 
-@keyframes cb-projectbar-item-letter-in {
+@keyframes menu-letter-in {
 	0% {
-    max-width: 100%;
-    background: #fff;
+		max-width: 100%;
+		background: $color-white;
 	}
 	100% {
-    max-width: 100%;
-    background: 0 0;
+		max-width: 100%;
+		background: transparent;
 	}
 }
 
-@keyframes cb-projectbar-item-letter-out {
+@keyframes menu-letter-out {
 	0% {
-    max-width: 100%;
+    	max-width: 100%;
 	}
 	100% {
-    max-width: 0%;
+    	max-width: 0%;
 	}
 }

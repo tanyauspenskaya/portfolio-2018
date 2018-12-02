@@ -25,18 +25,18 @@
       text-align: center;
       letter-spacing: 1px;
       opacity: .6;
-      animation: cb-projectbar-item-letter-out .3s;
+      animation: menu-letter-out .3s;
       transition: opacity .2s;
 
       &:first-child {
         animation: none;
-        max-width: 100%!important;
+        max-width: 100%;
       }
     }
 
     &:hover &-letter {
       opacity: 1;
-      animation: cb-projectbar-item-letter-in steps(2) 50ms forwards;
+      animation: menu-letter-in steps(2) 50ms forwards;
 
       &:nth-child(1) {
         animation: none;
@@ -78,7 +78,7 @@
       top: 50%;
       right: 0;
       height: 1px;
-      width: 5.5rem;
+      width: 5.4rem;
       transition: all .3s ease-in-out;
       background: currentColor;
       transform-origin: right center;
@@ -88,10 +88,6 @@
     &.active {
       font-weight: bold;
 
-      .nav__link-letter {
-        opacity: 1;
-      }
-
       &::after {
         transform: scaleX(1);
       }
@@ -99,6 +95,10 @@
       &:focus::after, 
       &:hover::after {
         transform: scaleX(0);
+      }
+
+      .nav__link-letter {
+        opacity: 1;
       }
     }
   }
