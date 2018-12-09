@@ -1,12 +1,13 @@
 .contact {
-  padding: 10vw 13vw 2vw;
-  background-color: $color-green;
+  padding: 8vw 13vw 2vw;
   color: $color-blue-dark;
   text-align: center;
 
-  &__paragraph {
-    &--copyright {
-      padding: 1.5em;
-    }
+  &__email {
+    display: block;
+  }
+
+  &__list {
+    margin-top: 6em;
   }
 }

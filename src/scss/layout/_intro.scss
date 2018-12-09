@@ -1,7 +1,7 @@
 .intro {
   height: 100vh;
   background: $color-blue-dark;
-  background: linear-gradient(to bottom, $color-blue-dark 0%, $color-purple-darker 32%, $color-purple-lighter 60%, $color-pink 100%);
+  background-image: radial-gradient(farthest-side at 0 0,rgba(255,26,198,.3),rgba(255,26,198,0)),radial-gradient(farthest-side at 100% 0,rgba(60,221,221,.4),rgba(60,221,221,0)),radial-gradient(farthest-side at 50% 0,rgba(255,26,198,.1),rgba(255,26,198,0));
   color: $color-white;
   display: flex;
   justify-content: center;
@@ -17,18 +17,22 @@
   }
 
   &__header {
+    margin: auto;
+    font-weight: 100;
 
     &-name {
       display: block;
       text-shadow: 0 0 2rem rgba($color-blue-dark, .6);
+    }
+
+    &--designation {
+      font-weight: 500;
     }
   }
 
   &__scroll {
 
     &-btn {
-      position: absolute;
-      z-index: 200;
       width: 1em;
       height: 1.8em;
       border: 1px solid $color-white;
@@ -36,8 +40,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      left: 50%;
-      transform: translateX(-50%);
+      margin: 0 auto 5rem;
     }
 
     &-bar {
@@ -50,9 +53,4 @@
     }
   }
   
-
-  &__cube {
-    width: 60vh;
-    transform: translateY(62%);
-  }
 }

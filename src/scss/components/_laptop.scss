@@ -7,11 +7,15 @@
     height: 50vw;
     margin: 0 auto;
     padding-top: 14vw;
+    position: relative;
+    z-index: 10;
   }
 
   &__prlx {
     transform: translate(var(--tx), var(--ty));
-    will-change: transform;
+    opacity: var(--opacity);
+    will-change: transform, opacity;
+    transition: all .1s;
 
     &--device {
       position: relative;

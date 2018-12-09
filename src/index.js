@@ -105,6 +105,7 @@ class ShapeOverlays {
   const sectionArr = document.querySelectorAll('.section');
   const sectionObj = {};
   let i = 0;
+  const sectionLastID = sectionArr[sectionArr.length-1].id;
 
   Array.prototype.forEach.call(sectionArr, function(item) {
     sectionObj[item.id] = item.offsetTop;
@@ -113,9 +114,14 @@ class ShapeOverlays {
   window.onscroll = function() {
     const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
     for (i in sectionObj) {
-      if (sectionObj[i] <= scrollPosition) {
-        document.querySelector('.active').setAttribute('class', 'nav__link');
-        document.querySelector('a[href*=' + i + ']').setAttribute('class', 'nav__link active');
+      if (sectionObj[i] <= scrollPosition) {        
+        document.querySelector('.active').classList.remove('active');
+        document.querySelector('a[href*=' + i + ']').classList.add('active');
+
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+          document.querySelector('.active').classList.remove('active');
+          document.querySelector('a[href*=' + sectionLastID + ']').classList.add('active');
+        }
       }
     }
   };
@@ -142,7 +148,7 @@ class ShapeOverlays {
           to: '0'
         }
       }
-    }))
+    }));
   
   });
   
@@ -165,11 +171,35 @@ class ShapeOverlays {
         '--ty': {
           from: ty,
           to: '0'
+        },
+        '--opacity': {
+          from: 0,
+          to: .99
         }
       }
-    }))
+    }));
   
   });
+
+  /* --- opacity on scroll --- */
+  const aboutTY = '5vh';
+
+  instances.push(basicScroll.create({
+    elem: document.querySelector('.about__content'),
+    from: 'top-middle',
+    to: 'middle-middle',
+    timing: 'backInOut',
+    props: {
+      '--opacity': {
+        from: 0,
+        to: .99
+      },
+      '--ty': {
+        from: aboutTY,
+        to: '0'
+      }
+    }
+  }));
 
   instances.forEach((instance) => instance.start());
   /* --- end parallax --- */

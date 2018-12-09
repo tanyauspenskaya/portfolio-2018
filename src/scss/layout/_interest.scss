@@ -1,0 +1,21 @@
+.interest {
+  background-color: $color-blue-dark;
+  background-color: #1B0D56;
+  color: $color-white;
+  padding: 10vw 25vw;
+  min-height: 100vh;
+
+  &__title {
+    text-align: center;
+    margin: 0 auto 1.2em;
+  }
+
+  &__list {
+    margin: 0 auto 4em;
+    text-align: center;
+
+    &-item {
+      color: rgba($color-white, .7);
+    }
+  }
+}

@@ -1,7 +1,16 @@
 .about {
-  background: rgb(143,61,175);
-  background: radial-gradient(circle, $color-pink 0%, $color-purple-lighter 30%, $color-purple-darker 60%, $color-blue-dark 100%);
+  //background: rgb(143,61,175);
+  //background: radial-gradient(circle, $color-pink 0%, $color-purple-lighter 30%, $color-purple-darker 60%, $color-blue-dark 100%);
+  background: $color-blue-dark;
   color: $color-white;
   padding: 10vw 13vw;
   text-align: center;
+
+  &__content {
+    opacity: var(--opacity);
+    transform: translateY(var(--ty));
+    will-change: opacity, transform;
+    transition: all .1s;
+    margin-bottom: 8vw;
+  }
 }

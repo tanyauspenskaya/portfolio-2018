@@ -1,7 +1,7 @@
 .cube {
 
   &__box {
-    height: 90vh;
+    //height: 90vh;
   }
 
   &__prlx {
@@ -10,7 +10,8 @@
     margin: 0 auto;
     position: relative;
     transform: translateY(var(--ty));
-	  will-change: transform;
+    will-change: transform;
+    transition: all .1s;
 
     &-img {
       filter: drop-shadow(0 12px 7px rgba($color-blue-dark,.7)); 

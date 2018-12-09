@@ -20,14 +20,12 @@
       <span class="nav__link-letter">O</span>
     </a>
     <a class="nav__link" href="#about">
-      <span class="nav__link-letter">S</span>
-      <span class="nav__link-letter">E</span>
-      <span class="nav__link-letter">R</span>
       <span class="nav__link-letter">V</span>
       <span class="nav__link-letter">I</span>
-      <span class="nav__link-letter">C</span>
-      <span class="nav__link-letter">E</span>
       <span class="nav__link-letter">S</span>
+      <span class="nav__link-letter">I</span>
+      <span class="nav__link-letter">O</span>
+      <span class="nav__link-letter">N</span>
     </a>
     <a class="nav__link" href="#work">
       <span class="nav__link-letter">A</span>
@@ -38,6 +36,15 @@
       <span class="nav__link-letter">A</span>
       <span class="nav__link-letter">C</span>
       <span class="nav__link-letter">H</span>
+    </a>
+    <a class="nav__link" href="#interest">
+      <span class="nav__link-letter">P</span>
+      <span class="nav__link-letter">A</span>
+      <span class="nav__link-letter">S</span>
+      <span class="nav__link-letter">S</span>
+      <span class="nav__link-letter">I</span>
+      <span class="nav__link-letter">O</span>
+      <span class="nav__link-letter">N</span>
     </a>
     <a class="nav__link" href="#contact">
       <span class="nav__link-letter">C</span>
@@ -53,15 +60,11 @@
   <section class="section intro" id="intro">
     <div class="intro__content">
       <h2 class="intro__header">
-        Hi, I am 
-        <span class="intro__header-name">Tatiana</span> 
-        a Front End Developer 
+        Hi, I am <span class="intro__header--name">Tatiana,</span>
+        <span class="intro__header--designation">a Front End Developer</span> 
       </h2>
       <div class="intro__scroll">
         <a href="#about" class="intro__scroll-btn"><span class="intro__scroll-bar"></span></a>
-      </div>
-      <div class="intro__cube">
-        <img src="<%= require('./img/cube-green.svg') %>" class="intro__cube-img">
       </div>
     </div>
   </section>
@@ -69,19 +72,19 @@
   <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
     <defs>
         <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stop-color="#8f3daf"/>
+          <stop offset="0%" stop-color="#8f3daf"/>
           <stop offset="40%" stop-color="#4e30b0"/>
           <stop offset="60%" stop-color="#3f2799"/>
           <stop offset="100%" stop-color="#3f2799"/>
         </linearGradient>
         <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%"   stop-color="#4AFFBF"/>
+            <stop offset="0%" stop-color="#4AFFBF"/>
             <stop offset="100%" stop-color="#ff0ea1"/>
           </linearGradient>
         <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%"   stop-color="#1e0e5e"/>
+          <stop offset="0%" stop-color="#1e0e5e"/>
           <stop offset="40%" stop-color="#3f2799"/>
-          <stop offset="60%"   stop-color="#4e30b0"/>
+          <stop offset="60%" stop-color="#4e30b0"/>
           <stop offset="100%" stop-color="#8f3daf"/>
         </linearGradient>
       </defs>
@@ -92,6 +95,10 @@
 
 
   <section class="section about" id="about">
+    <div class="about__content">
+        <p class="about__paragraph">I have a serious passion for building</p>
+        <h3 class="about__title">beautiful digital experiences</h3>
+    </div>
 
     <div class="cube__anchor"></div>
     <div class="cube__box">
@@ -105,15 +112,14 @@
         <img src="<%= require('./img/cube-grape.svg') %>" class="cube__prlx-img">
       </div>
     </div>
-
-    <p class="about__paragraph">I have a serious passion for building</p>
-    <h3 class="about__title">beautiful digital experiences</h3>
   </section>
 
   <section class="section work" id="work">
-    <h3 class="work__title">how I work</h3>
-    <p class="work__paragraph">Reaching high standards of code quality through progressive development methodologies is my highest priority</p>
-
+    <div class="work__content">
+      <h3 class="work__title">how I work</h3>
+      <p class="work__paragraph">Reaching high standards of code quality through progressive development methodologies <span class="work__paragraph--linebreak">is my highest priority</span></p>
+    </div>
+    
     <div class="laptop__anchor"></div>
     <div class="laptop__box">
       <div class="laptop__prlx laptop__prlx--device" data-tx="-33" data-ty="-14">
@@ -124,30 +130,36 @@
       </div>
     </div>
 
-    <h3 class="work__title">what interests me</h3>
-    <ul class="work__list">
-      <li class="work__list-item">Designing and developing structural code</li>
-      <li class="work__list-item">Working with cutting-edge technologies</li>
-      <li class="work__list-item">Building responsive cross browser layouts that work on any device</li>
+    <svg class="work__triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,75 100,0 100,100 0,100"></polygon> </svg>
+  </section>
+
+  <section class="section interest" id="interest">
+    <h3 class="interest__title">what interests me</h3>
+    <ul class="interest__list">
+      <li class="interest__list-item">Designing and developing structural code</li>
+      <li class="interest__list-item">Working with cutting-edge technologies</li>
+      <li class="interest__list-item">Building responsive cross browser layouts that work on any device</li>
     </ul>
 
-    <h3 class="work__title"><a href="https://timsop.in/" target="_blank">recent work</a></h3>
+    <h3 class="interest__title interest__title--recentwork"><a href="https://timsop.in/" target="_blank">recent work</a></h3>
   </section>
 
   <footer class="section contact" id="contact">
-    <h3 class="contact__title">get in touch</h3>
+    <h3 class="contact__title"><a href="mailto:hello@tatianausp.com" class="contact__email">hello@tatianausp.com</a></h3>
     <ul class="contact__list social">
       <li class="contact__list-item social__item">
-        <a href="mailto:tanyauspenskaya@gmail.com" class="social__link social__link--email"></a>
+        <a href="https://www.linkedin.com/in/tatianauspenskaia/" class="social__link social__link--linkedin" target="_blank">linkedin</a>
       </li>
       <li class="contact__list-item social__item">
-        <a href="https://www.linkedin.com/in/tatianauspenskaia/" class="social__link social__link--linkedin" target="_blank"></a>
+        <a href="https://github.com/tanyauspenskaya" class="social__link social__link--github" target="_blank" target="_blank">github</a>
       </li>
       <li class="contact__list-item social__item">
-        <a href="https://github.com/tanyauspenskaya" class="social__link social__link--github" target="_blank"></a>
+        <a href="https://dribbble.com/tatianaexplores" class="social__link social__link--dribbble" target="_blank">dribbble</a>
+      </li>
+      <li class="contact__list-item social__item">
+        <a href="https://twitter.com/tatianaexplores" class="social__link social__link--twitter" target="_blank">twitter</a>
       </li>
     </ul>
-    <p class="contact__paragraph contact__paragraph--copyright">© 2018 Tatiana Uspenskaia | Totonto, Ontario</p>
   </footer>
   
   <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>

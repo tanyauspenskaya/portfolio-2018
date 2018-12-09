@@ -1,0 +1,32 @@
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .6em;
+
+  &__item {
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-of-type)::after {
+      content: '';
+      display: block;
+      width: .25em;
+      height: .25em;
+      border-radius: 5em;
+      background-color: currentColor;
+      margin: 0 .7em;
+    }
+  }
+
+  &__link {
+    transition: all .2s ease;
+
+    &:hover,
+    &:focus {
+      font-weight: 400;
+      letter-spacing: 2px;
+    }
+  }
+}
