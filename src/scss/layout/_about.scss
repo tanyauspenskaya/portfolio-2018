@@ -1,9 +1,7 @@
 .about {
-  //background: rgb(143,61,175);
-  //background: radial-gradient(circle, $color-pink 0%, $color-purple-lighter 30%, $color-purple-darker 60%, $color-blue-dark 100%);
-  background: $color-blue-dark;
+  background-color: $colorgrad-blue;
   color: $color-white;
-  padding: 10vw 13vw;
+  padding: 30vw 13vw 10vw;
   text-align: center;
 
   &__content {

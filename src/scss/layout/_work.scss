@@ -1,7 +1,8 @@
 .work {
   background: $color-blue-dark;
+  background-image: linear-gradient( 135deg, #6B73FF 10%, #000DFF 100%);
+  background: $colorgrad-blue;
   color: $color-white;
-  position: relative;
   overflow: hidden;
 
   &__content {
@@ -23,12 +24,17 @@
   }
 
   &__triangle {
-    display: block;
-    height: 30vw;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    fill: #1B0D56;
-    transition: transform 0.9s cubic-bezier(.52,.01,.16,1);
+    position: relative;
+
+    &-img {
+      display: block;
+      height: 30vw;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      fill: #1B0D56;
+      fill: $colorgrad-bluedark;
+      transition: transform 0.9s cubic-bezier(.52,.01,.16,1);
+    }
   }
 }

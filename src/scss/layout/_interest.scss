@@ -1,9 +1,14 @@
 .interest {
   background-color: $color-blue-dark;
   background-color: #1B0D56;
+  background-image: linear-gradient( 135deg, #6B73FF 10%, #000DFF 100%);
+  background: $colorgrad-bluedark;
   color: $color-white;
   padding: 10vw 25vw;
   min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
 
   &__title {
     text-align: center;

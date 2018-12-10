@@ -28,16 +28,11 @@ h3 {
 
 .intro {
   &__header {
-    font-weight: inherit;
-    font-size: 1.6em;
-    line-height: $base-line-height * .95;
+    font-size: .85em;
+    line-height: $base-line-height * .9;
 
     &--name {
-    }
-
-    &--designation {
-      display: block;
-
+      font-size: 4.1em;
     }
   }
 }

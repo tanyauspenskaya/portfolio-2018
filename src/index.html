@@ -60,7 +60,7 @@
   <section class="section intro" id="intro">
     <div class="intro__content">
       <h2 class="intro__header">
-        Hi, I am <span class="intro__header--name">Tatiana,</span>
+        Hi, I am <span class="intro__header--name">Tatiana</span>
         <span class="intro__header--designation">a Front End Developer</span> 
       </h2>
       <div class="intro__scroll">
@@ -71,23 +71,23 @@
 
   <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
     <defs>
-        <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#8f3daf"/>
-          <stop offset="40%" stop-color="#4e30b0"/>
-          <stop offset="60%" stop-color="#3f2799"/>
-          <stop offset="100%" stop-color="#3f2799"/>
-        </linearGradient>
-        <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#4AFFBF"/>
-            <stop offset="100%" stop-color="#ff0ea1"/>
-          </linearGradient>
-        <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#1e0e5e"/>
-          <stop offset="40%" stop-color="#3f2799"/>
-          <stop offset="60%" stop-color="#4e30b0"/>
-          <stop offset="100%" stop-color="#8f3daf"/>
-        </linearGradient>
-      </defs>
+      <linearGradient id="gradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#005DF7"/>
+        <stop offset="40%" stop-color="#005DF7"/>
+        <stop offset="60%" stop-color="#0060FF"/>
+        <stop offset="100%" stop-color="#0060FF"/>
+      </linearGradient>
+      <linearGradient id="gradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#00D4A4"/>
+        <stop offset="100%" stop-color="#FFBA38"/>
+      </linearGradient>
+      <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#0060FF"/>
+        <stop offset="50%" stop-color="#0060FF"/>
+        <stop offset="60%" stop-color="#005DF7"/>
+        <stop offset="100%" stop-color="#1904E5"/>
+      </linearGradient>
+    </defs>
     <path class="shape-overlays__path shape-overlays__path--first"></path>
     <path class="shape-overlays__path shape-overlays__path--second"></path>
     <path class="shape-overlays__path shape-overlays__path--third"></path>
@@ -102,14 +102,14 @@
 
     <div class="cube__anchor"></div>
     <div class="cube__box">
-      <div class="cube__prlx cube__prlx--pink" data-ty="20">
+      <div class="cube__prlx cube__prlx--green" data-ty="20">
         <img src="<%= require('./img/cube-green.svg') %>" class="cube__prlx-img">
       </div>
-      <div class="cube__prlx cube__prlx--fandango" data-ty="80">
-        <img src="<%= require('./img/cube-fandango.svg') %>" class="cube__prlx-img">
+      <div class="cube__prlx cube__prlx--yellow" data-ty="80">
+        <img src="<%= require('./img/cube-yellow.svg') %>" class="cube__prlx-img">
       </div>
-      <div class="cube__prlx cube__prlx--grape" data-ty="140">
-        <img src="<%= require('./img/cube-grape.svg') %>" class="cube__prlx-img">
+      <div class="cube__prlx cube__prlx--blue" data-ty="140">
+        <img src="<%= require('./img/cube-blue.svg') %>" class="cube__prlx-img">
       </div>
     </div>
   </section>
@@ -130,7 +130,9 @@
       </div>
     </div>
 
-    <svg class="work__triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,75 100,0 100,100 0,100"></polygon> </svg>
+    <div class="work__triangle">
+      <svg class="work__triangle-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,75 100,0 100,100 0,100"></polygon> </svg>
+    </div>
   </section>
 
   <section class="section interest" id="interest">

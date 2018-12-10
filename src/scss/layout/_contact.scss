@@ -1,6 +1,7 @@
 .contact {
-  padding: 8vw 13vw 2vw;
+  padding: 7vw 13vw 2vw;
   color: $color-blue-dark;
+  color: $colorgrad-blue;
   text-align: center;
 
   &__email {
@@ -8,6 +9,6 @@
   }
 
   &__list {
-    margin-top: 6em;
+    margin-top: 5em;
   }
 }
