@@ -1,7 +1,6 @@
 .intro {
   height: 100vh;
   background: $colorgrad-blue;
-  background-image: radial-gradient(farthest-side at 0 0,rgba($colorgrad-pink,.8),rgba($colorgrad-pink,0)),radial-gradient(farthest-side at 100% 0,rgba($colorgrad-green,1),rgba($colorgrad-green,0)),radial-gradient(farthest-side at 50% 0,rgba($colorgrad-pink,.2),rgba($colorgrad-pink,0));
   color: $color-white;
   display: flex;
   justify-content: center;
@@ -25,6 +24,7 @@
       display: block;
       font-weight: 500;
       text-transform: capitalize;
+      text-shadow: 0 2px 4px rgba($color-blue-dark,.65);
     }
   }
 

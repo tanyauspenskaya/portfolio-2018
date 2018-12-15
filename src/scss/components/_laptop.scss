@@ -3,10 +3,10 @@
   &__box {
     display: flex;
     justify-content: center;
-    width: 50vw;
-    height: 50vw;
+    width: 76%;
+    height: 74vh;
     margin: 0 auto;
-    padding-top: 14vw;
+    padding-top: 8em;
     position: relative;
     z-index: 10;
   }
@@ -19,16 +19,18 @@
 
     &--device {
       position: relative;
+      width: 75vh;
     }
 
     &--code {
       position: absolute;
-      width: 33vw;
+      width: 50vh;
+
+      img {
+        margin-top: 4vh;
+      }
     }
-    
-    &:last-of-type img {
-      margin-top: 2.8vw;
-    }
+
   }
 
   &__img {

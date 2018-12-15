@@ -126,7 +126,12 @@ class ShapeOverlays {
     }
   };
   /* --- end active menu --- */
+  
+}());
 
+
+window.onload = function(e){ 
+  
   /* --- parallax --- */
   const instances = [];
   const anchor = document.querySelector('.cube__anchor');
@@ -182,31 +187,34 @@ class ShapeOverlays {
   });
 
   /* --- opacity on scroll --- */
-  const aboutTY = '5vh';
+  document.querySelectorAll('.about__content, .work__content, .interest__content, .interest__title--recentwork').forEach((elem) => {
 
-  instances.push(basicScroll.create({
-    elem: document.querySelector('.about__content'),
-    from: 'top-middle',
-    to: 'middle-middle',
-    timing: 'backInOut',
-    props: {
-      '--opacity': {
-        from: 0,
-        to: .99
-      },
-      '--ty': {
-        from: aboutTY,
-        to: '0'
+    const ty ='3vh';
+
+    instances.push(basicScroll.create({
+      elem: elem,
+      from: 'top-middle',
+      to: 'middle-middle',
+      direct: true,
+      props: {
+        '--opacity': {
+          from: 0,
+          to: .99
+        },
+        '--ty': {
+          from: ty,
+          to: '0'
+        }
       }
-    }
-  }));
+    }));
+
+  });
+
 
   instances.forEach((instance) => instance.start());
   /* --- end parallax --- */
-  
-}());
 
-
+}
 
 
 /* easings */ 

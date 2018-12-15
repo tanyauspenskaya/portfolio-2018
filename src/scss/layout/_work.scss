@@ -6,7 +6,11 @@
   overflow: hidden;
 
   &__content {
-    padding: 10vw 25vw 0;
+    padding: 5em 12vw 0;
+    opacity: var(--opacity);
+    transform: translateY(var(--ty));
+    will-change: opacity, transform;
+    transition: all .1s;
   }
 
   &__title {
@@ -28,7 +32,7 @@
 
     &-img {
       display: block;
-      height: 30vw;
+      height: 42vh;
       width: 100%;
       position: absolute;
       bottom: 0;

@@ -1,7 +1,7 @@
 .about {
   background-color: $colorgrad-blue;
   color: $color-white;
-  padding: 30vw 13vw 10vw;
+  padding: 11em 12vw 5em;
   text-align: center;
 
   &__content {
@@ -9,6 +9,6 @@
     transform: translateY(var(--ty));
     will-change: opacity, transform;
     transition: all .1s;
-    margin-bottom: 8vw;
+    margin-bottom: 5em;
   }
 }
