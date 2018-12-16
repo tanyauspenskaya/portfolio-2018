@@ -126,6 +126,27 @@ class ShapeOverlays {
     }
   };
   /* --- end active menu --- */
+
+  /* --- email letter hover --- */
+  function toArray(arr) { 
+    return Array.isArray(arr) ? arr : Array.from(arr);
+  }
+  
+  function makeSpans(selector) {
+    const elArr = document.querySelectorAll(selector);
+    const elArr2 = toArray(elArr);
+    const elements = elArr2.slice(0);
+    
+    return elements.map(function (element) {
+      const text = element.innerText.split('');
+      const spans = text.map(function (letter) {
+        return '<span>' + letter + '</span>'
+      }).join('');
+      return element.innerHTML = spans;
+    })
+  }
+  
+  makeSpans('.contact__email');
   
 }());
 

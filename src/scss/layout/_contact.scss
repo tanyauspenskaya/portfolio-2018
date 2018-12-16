@@ -1,11 +1,27 @@
 .contact {
   padding: 3.5em 12vw 1em;
-  color: $color-blue-dark;
   color: $colorgrad-blue;
   text-align: center;
 
   &__email {
     display: block;
+
+    span {
+      transition: color 3s;
+      transition-delay: 1s;
+
+      &:hover {
+        transition: color 0s;
+      }
+
+      &:nth-child(1n):hover {
+        color: $color-green;
+      }
+
+      &:nth-child(2n):hover {
+        color: $color-pink;
+      }
+    }
   }
 
   &__list {

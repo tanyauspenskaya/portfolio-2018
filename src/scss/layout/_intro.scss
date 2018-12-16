@@ -24,7 +24,6 @@
       display: block;
       font-weight: 500;
       text-transform: capitalize;
-      text-shadow: 0 2px 4px rgba($color-blue-dark,.65);
     }
   }
 
@@ -45,8 +44,8 @@
       display: block;
       height: .65em;
       width: 2px;
+      border-radius: 2px;
       background: $color-white;
-      box-shadow: 1px 2px 3px rgba($color-blue-dark, .7);
       animation: float 4s ease-in-out infinite;
     }
   }
