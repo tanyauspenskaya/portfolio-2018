@@ -18,6 +18,26 @@ footer {
   @include desk-down {
     font-size: 1.8em; 
   }
+
+  @include laptop {
+    font-size: 1.6em; 
+  }
+
+  @include tab-port {
+    font-size: 1.4em; 
+  }
+
+  @include phone-port {
+    font-size: 1.2em; 
+  }
+
+  @include phone-port-sm {
+    font-size: 1em; 
+  }
+
+  @include phone-port-xs {
+    font-size: .8em; 
+  }
 }
 
 p {

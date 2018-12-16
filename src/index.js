@@ -140,7 +140,7 @@ window.onload = function(e){
   /* cube parallax */
   document.querySelectorAll('.cube__prlx').forEach((elem) => {
 
-    const ty = elem.getAttribute('data-ty') + 'vh';
+    const ty = elem.getAttribute('data-ty') + 'em';
   
     instances.push(basicScroll.create({
       elem: anchor,
@@ -160,8 +160,8 @@ window.onload = function(e){
   /* laptop parallax */
   document.querySelectorAll('.laptop__prlx').forEach((elem) => {
 
-    const tx = elem.getAttribute('data-tx') + 'vh';
-    const ty = elem.getAttribute('data-ty') + 'vh';
+    const tx = elem.getAttribute('data-tx') + 'em';
+    const ty = elem.getAttribute('data-ty') + 'em';
   
     instances.push(basicScroll.create({
       elem: anchorLaptop,

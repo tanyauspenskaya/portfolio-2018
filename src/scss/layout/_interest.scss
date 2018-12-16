@@ -5,10 +5,23 @@
   background: $colorgrad-bluedark;
   color: $color-white;
   padding: 5em 25vw;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
+
+  @include tab-port {
+    padding: 5em 20vw;
+  }
+
+  @include phone-land {
+    padding: 5em 15vw;
+  }
+
+  @include phone-port {
+    padding: 5em 12vw;
+    min-height: 80vh;
+  }
 
   &__content {
     opacity: var(--opacity);

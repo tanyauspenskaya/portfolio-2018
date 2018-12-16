@@ -4,11 +4,20 @@
     display: flex;
     justify-content: center;
     width: 76%;
-    height: 74vh;
+    height: 74em;
     margin: 0 auto;
-    padding-top: 8em;
+    padding-top: 22em;
     position: relative;
     z-index: 10;
+    font-size: 1vh;
+
+    @include tab-port {
+      font-size: .9vw;
+    }
+
+    @include phone-land {
+      font-size: 1vw;
+    }
   }
 
   &__prlx {
@@ -19,15 +28,15 @@
 
     &--device {
       position: relative;
-      width: 75vh;
+      width: 75em;
     }
 
     &--code {
       position: absolute;
-      width: 50vh;
+      width: 50em;
 
       img {
-        margin-top: 4vh;
+        margin-top: 4em;
       }
     }
 

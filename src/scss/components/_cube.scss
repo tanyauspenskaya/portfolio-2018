@@ -1,12 +1,23 @@
 .cube {
 
   &__box {
-    //height: 90vh;
+    font-size: 1vh;
+
+    @include tab-port {
+      font-size: .8vw;
+    }
+
+    @include phone-land {
+      font-size: 1vw;
+    }
+
+    @include phone-port {
+      font-size: 1.1vw;
+    }
   }
 
   &__prlx {
-    width: 60vh;
-    //width: 44vw;
+    width: 60em;
     margin: 0 auto;
     position: relative;
     transform: translateY(var(--ty));
@@ -22,14 +33,12 @@
     }
 
     &--yellow {
-      margin-top: -32vh;
-      //margin-top: -23.5vw;
+      margin-top: -32em;
       z-index: 2;
     }
 
     &--blue {
-      margin-top: -32vh;
-      //margin-top: -23.5vw;
+      margin-top: -32em;
       z-index: 1;
     }
     

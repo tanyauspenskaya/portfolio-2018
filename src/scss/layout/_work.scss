@@ -29,10 +29,19 @@
 
   &__triangle {
     position: relative;
+    font-size: 1vh;
+
+    @include tab-port {
+      font-size: .9vw;
+    }
+
+    @include phone-land {
+      font-size: 1vw;
+    }
 
     &-img {
       display: block;
-      height: 42vh;
+      height: 42em;
       width: 100%;
       position: absolute;
       bottom: 0;
