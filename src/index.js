@@ -211,11 +211,13 @@ window.onload = function(e){
   document.querySelectorAll('.about__content, .work__content, .interest__content, .interest__title--recentwork').forEach((elem) => {
 
     const ty ='3vh';
+    const from = window.innerWidth/window.innerHeight<1 ? 'bottom-bottom' : 'top-middle';
+    const to = window.innerWidth/window.innerHeight<1 ? 'bottom-middle' : 'middle-middle';
 
     instances.push(basicScroll.create({
       elem: elem,
-      from: 'top-middle',
-      to: 'middle-middle',
+      from: from,
+      to: to,
       direct: true,
       props: {
         '--opacity': {

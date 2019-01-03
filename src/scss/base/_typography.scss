@@ -67,14 +67,7 @@ nav {
 }
 
 .intro {
-  &__header {
-    font-size: .85em;
-    line-height: $base-line-height * .9;
-
-    &--name {
-      font-size: 4.1em;
-    }
-  }
+  font-size: 2.1vw;
 
   @include phone-port {
     font-size: 1.3em;
@@ -86,6 +79,15 @@ nav {
 
   @include phone-port-xs {
     font-size: 1.05em;
+  }
+
+  &__header {
+    font-size: .85em;
+    line-height: $base-line-height * .9;
+
+    &--name {
+      font-size: 4.1em;
+    }
   }
 }
 

@@ -6,10 +6,6 @@
   justify-content: center;
   align-items: center;
 
-  &__scroll {
-    padding: 4vh 0 0;
-  }
-
   &__content {
     text-align: center;
     align-self: stretch;
@@ -33,6 +29,20 @@
 
   &__scroll {
 
+    padding: 4vh 0 0;
+
+    @include phone-port {
+      padding: 5vh 0 0;
+    }
+    
+    @include phone-port-sm {
+      padding: 6vh 0 0;
+    }
+  
+    @include phone-port-xs {
+      padding: 7vh 0 0;
+    }
+
     &-btn {
       width: 1em;
       height: 1.8em;
@@ -41,7 +51,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 2.5em;
+      margin: 0 auto 3em;
     }
 
     &-bar {
