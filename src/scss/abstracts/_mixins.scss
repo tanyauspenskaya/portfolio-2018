@@ -25,7 +25,7 @@ $desktop-xlg-up: 2560px;
   @media (max-width: #{$phone-port-sm}) { @content };   // 480px
 }
 @mixin phone-port {
-  @media (max-width: #{$phone-port}) { @content };      // 576px
+  @media (max-width: #{$phone-port}) { @content };      // 600px
 }
 @mixin phone-land {
   @media (max-width: #{$phone-land}) { @content };      // 768px

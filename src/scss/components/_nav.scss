@@ -84,6 +84,10 @@
       background: currentColor;
       transform-origin: right center;
       transform: scaleX(0);
+
+      @include phone-port-sm {
+        width: 3.2rem;
+      }
     }
 
     &.active {
@@ -101,6 +105,10 @@
       .nav__link-letter {
         opacity: 1;
       }
+    }
+
+    @include phone-port-sm {
+      padding: .8rem 1.5rem;
     }
   }
 }

@@ -3,7 +3,7 @@
 body {
   font-family: 'Encode Sans', sans-serif;
   font-weight: 200;
-  font-size: $base-font-size;
+  font-size: 1.6rem;
   line-height: $base-line-height;
 }
 
@@ -60,6 +60,10 @@ nav {
   @include desk-down {
     font-size: 1em; 
   }
+
+  @include phone-port-sm {
+    font-size: .8em; 
+  }
 }
 
 .intro {
@@ -70,6 +74,18 @@ nav {
     &--name {
       font-size: 4.1em;
     }
+  }
+
+  @include phone-port {
+    font-size: 1.3em;
+  }
+  
+  @include phone-port-sm {
+    font-size: 1.2em;
+  }
+
+  @include phone-port-xs {
+    font-size: 1.05em;
   }
 }
 
