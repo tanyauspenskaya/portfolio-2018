@@ -30,6 +30,25 @@
   &__triangle {
     position: relative;
     font-size: 1vh;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    bottom: 21em;
+    pointer-events: none;
+
+    &-item {
+      display: block;
+      width: 300vw;
+      height: 300vw;
+      margin-left: -150vw;
+      will-change: transform;
+      transform: rotate(var(--r));
+      position: absolute;
+      top: 0;
+      transition: transform 0.9s cubic-bezier(.52,.01,.16,1);
+      background-color: $colorgrad-bluedark;
+    }
 
     @include tab-port {
       font-size: .9vw;
@@ -39,15 +58,5 @@
       font-size: 1vw;
     }
 
-    &-img {
-      display: block;
-      height: 42em;
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      fill: #1B0D56;
-      fill: $colorgrad-bluedark;
-      transition: transform 0.9s cubic-bezier(.52,.01,.16,1);
-    }
   }
 }

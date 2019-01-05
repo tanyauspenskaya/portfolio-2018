@@ -207,6 +207,27 @@ window.onload = function(e){
   
   });
 
+  /* laptop background rotation */
+  document.querySelectorAll('.work__triangle-item').forEach((elem) => {
+
+    const anchor = document.querySelector('.work__triangle');
+    const r = elem.getAttribute('data-r') + 'deg';
+  
+    instances.push(basicScroll.create({
+      elem: anchor,
+      from: 'top-bottom',
+      to: 'top-middle',
+      direct: elem,
+      props: {
+        '--r': {
+          from: '0',
+          to: r
+        }
+      }
+    }));
+  
+  });
+
   /* --- opacity on scroll --- */
   document.querySelectorAll('.about__content, .work__content, .interest__content, .interest__title--recentwork').forEach((elem) => {
 
