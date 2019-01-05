@@ -99,6 +99,17 @@ class ShapeOverlays {
     }
     overlay.animate();
   });
+
+  let counter = 0;
+  function svgOnScroll() {
+    if(counter === 0) {
+      if(window.pageYOffset > 5){
+        btn.click();
+        counter++; 
+      }
+    }
+    if(window.pageYOffset === 0) counter = 0;
+  }
   /* --- end svg animation --- */
 
   /* --- active menu --- */
@@ -111,7 +122,7 @@ class ShapeOverlays {
     sectionObj[item.id] = item.offsetTop;
   });
 
-  window.onscroll = function() {
+  function menuOnScroll() {
     const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
     for (i in sectionObj) {
       if (sectionObj[i] <= scrollPosition) {        
@@ -124,7 +135,7 @@ class ShapeOverlays {
         }
       }
     }
-  };
+  }
   /* --- end active menu --- */
 
   /* --- email letter hover --- */
@@ -147,6 +158,10 @@ class ShapeOverlays {
   }
   
   makeSpans('.contact__email');
+  /* --- end email letter hover --- */
+
+  window.addEventListener('scroll', menuOnScroll);
+  window.addEventListener('scroll', svgOnScroll);
   
 }());
 
@@ -228,7 +243,7 @@ window.onload = function(e){
   
   });
 
-  /* --- opacity on scroll --- */
+  /* opacity on scroll */
   document.querySelectorAll('.about__content, .work__content, .interest__content, .interest__title--recentwork').forEach((elem) => {
 
     const ty ='3vh';
