@@ -141,12 +141,10 @@ class ShapeOverlays {
     for (i in sectionObj) {
       if (sectionObj[i] <= scrollPosition) {        
         document.querySelector('.active').classList.remove('active');
-        //document.querySelector(`a[href*=${i}]`).classList.add('active');
         document.querySelector('a[href*=' + i + ']').classList.add('active');
 
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
           document.querySelector('.active').classList.remove('active');
-          //document.querySelector(`a[href*=${sectionLastID}]`).classList.add('active');
           document.querySelector('a[href*=' + sectionLastID + ']').classList.add('active');
         }
       }

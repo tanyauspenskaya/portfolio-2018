@@ -5,6 +5,7 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
+  min-height: 55vh;
 
   @include tab-port {
     padding: 5em 20vw;
