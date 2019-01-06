@@ -87,6 +87,18 @@ class ShapeOverlays {
 
 
 (function() {
+  /* --- viewport units --- */
+  function mobileViewportUnits() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      });
+    }
+  }
+  mobileViewportUnits();
 
   /* --- svg animation --- */
   const btn = document.querySelector('.intro__scroll-btn');

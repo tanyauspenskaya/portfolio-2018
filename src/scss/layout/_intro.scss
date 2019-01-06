@@ -1,5 +1,6 @@
 .intro {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background: $colorgrad-blue;
   color: $color-white;
   display: flex;
