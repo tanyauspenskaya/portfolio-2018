@@ -71,6 +71,7 @@ class ShapeOverlays {
   
   renderLoop() {
     this.el.classList.add('is-opened');
+    document.body.classList.add('u-noscroll');
     this.render();
     if (Date.now() - this.timeStart < this.duration + this.delayPerPath * (this.path.length - 1) + this.delayPointsMax) {
       requestAnimationFrame(() => {
@@ -79,6 +80,7 @@ class ShapeOverlays {
     } else {
       this.isAnimating = false;
       this.el.classList.remove('is-opened');
+      document.body.classList.remove('u-noscroll');
     }
   }
 }
@@ -139,11 +141,13 @@ class ShapeOverlays {
     for (i in sectionObj) {
       if (sectionObj[i] <= scrollPosition) {        
         document.querySelector('.active').classList.remove('active');
-        document.querySelector(`a[href*=${i}]`).classList.add('active');
+        //document.querySelector(`a[href*=${i}]`).classList.add('active');
+        document.querySelector('a[href*=' + i + ']').classList.add('active');
 
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
           document.querySelector('.active').classList.remove('active');
-          document.querySelector(`a[href*=${sectionLastID}]`).classList.add('active');
+          //document.querySelector(`a[href*=${sectionLastID}]`).classList.add('active');
+          document.querySelector('a[href*=' + sectionLastID + ']').classList.add('active');
         }
       }
     }

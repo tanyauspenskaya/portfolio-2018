@@ -67,7 +67,23 @@ nav {
 }
 
 .intro {
-  font-size: 2.1vw;
+  font-size: 2.3vw;
+
+  @include desk-lg-up {
+    font-size: 3.8vh;
+  }
+
+  @include desk-down {
+    font-size: 1.8em; 
+  }
+
+  @include laptop {
+    font-size: 1.6em; 
+  }
+
+  @include tab-port {
+    font-size: 1.4em; 
+  }
 
   @include phone-port {
     font-size: 1.3em;
@@ -96,5 +112,17 @@ nav {
     &--copyright {
       font-size: .6em;
     }
+  }
+}
+
+.social {
+  font-size: .6em;
+
+  @include tab-port {
+    font-size: .7em; 
+  }
+
+  @include phone-port {
+    font-size: .8em;
   }
 }

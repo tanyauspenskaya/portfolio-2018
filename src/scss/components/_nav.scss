@@ -14,10 +14,14 @@
     justify-content: flex-end;
     color: inherit;
     position: relative;
-    padding: 1rem 3.6rem;
+    padding: .7em 1.8em;
     text-align: right;
     line-height: 1;
     text-transform: uppercase;
+
+    @include phone-port {
+      padding: 1rem 3.6rem;
+    }
 
     &-letter {
       display: inline-block;
@@ -79,14 +83,14 @@
       top: 50%;
       right: 0;
       height: 1px;
-      width: 5.4rem;
+      width: 3.4em;
       transition: all .3s ease-in-out;
       background: currentColor;
       transform-origin: right center;
       transform: scaleX(0);
 
-      @include phone-port-sm {
-        width: 3.2rem;
+      @include phone-port {
+        width: 3rem;
       }
     }
 
