@@ -227,7 +227,8 @@ window.onload = function(e){
         },
         '--opacity': {
           from: 0,
-          to: .99
+          to: .99,
+          timing: 'backOut'
         }
       }
     }));
@@ -242,7 +243,7 @@ window.onload = function(e){
   
     instances.push(basicScroll.create({
       elem: anchor,
-      from: 'top-bottom',
+      from: 'top-middle',
       to: 'top-middle',
       direct: elem,
       props: {
