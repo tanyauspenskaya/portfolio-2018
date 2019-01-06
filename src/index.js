@@ -115,7 +115,7 @@ class ShapeOverlays {
   let counter = 0;
   function svgOnScroll() {
     if(counter === 0) {
-      if(window.pageYOffset > 5){
+      if(window.pageYOffset > 0){
         btn.click();
         counter++; 
       }
@@ -139,11 +139,11 @@ class ShapeOverlays {
     for (i in sectionObj) {
       if (sectionObj[i] <= scrollPosition) {        
         document.querySelector('.active').classList.remove('active');
-        document.querySelector('a[href*=' + i + ']').classList.add('active');
+        document.querySelector(`a[href*=${i}]`).classList.add('active');
 
         if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
           document.querySelector('.active').classList.remove('active');
-          document.querySelector('a[href*=' + sectionLastID + ']').classList.add('active');
+          document.querySelector(`a[href*=${sectionLastID}]`).classList.add('active');
         }
       }
     }
@@ -163,7 +163,7 @@ class ShapeOverlays {
     return elements.map(function (element) {
       const text = element.innerText.split('');
       const spans = text.map(function (letter) {
-        return '<span>' + letter + '</span>'
+        return `<span>${letter}</span>`
       }).join('');
       return element.innerHTML = spans;
     })
@@ -182,12 +182,11 @@ window.onload = function(e){
   
   /* --- parallax --- */
   const instances = [];
-  const anchor = document.querySelector('.cube__anchor');
-  const anchorLaptop = document.querySelector('.laptop__anchor');
 
   /* cube parallax */
   document.querySelectorAll('.cube__prlx').forEach((elem) => {
 
+    const anchor = document.querySelector('.cube__anchor');
     const ty = elem.getAttribute('data-ty') + 'em';
   
     instances.push(basicScroll.create({
@@ -208,11 +207,12 @@ window.onload = function(e){
   /* laptop parallax */
   document.querySelectorAll('.laptop__prlx').forEach((elem) => {
 
+    const anchor = document.querySelector('.laptop__anchor');
     const tx = elem.getAttribute('data-tx') + 'em';
     const ty = elem.getAttribute('data-ty') + 'em';
   
     instances.push(basicScroll.create({
-      elem: anchorLaptop,
+      elem: anchor,
       from: 'middle-middle',
       to: 'top-top',
       direct: elem,
@@ -227,7 +227,7 @@ window.onload = function(e){
         },
         '--opacity': {
           from: 0,
-          to: .99,
+          to: 1,
           timing: 'backOut'
         }
       }
@@ -243,8 +243,8 @@ window.onload = function(e){
   
     instances.push(basicScroll.create({
       elem: anchor,
-      from: 'top-middle',
-      to: 'top-middle',
+      from: 'top-bottom',
+      to: 'top-bottom',
       direct: elem,
       props: {
         '--r': {
@@ -256,12 +256,12 @@ window.onload = function(e){
   
   });
 
-  /* opacity on scroll */
-  document.querySelectorAll('.about__content, .work__content, .interest__content, .interest__title--recentwork').forEach((elem) => {
+  /* text blocks opacity */
+  document.querySelectorAll('.about__content, .work__content, .interest__content').forEach((elem) => {
 
     const ty ='3vh';
-    const from = window.innerWidth/window.innerHeight<1 ? 'bottom-bottom' : 'top-middle';
-    const to = window.innerWidth/window.innerHeight<1 ? 'bottom-middle' : 'middle-middle';
+    const from = (window.innerHeight > window.innerWidth && elem.classList.contains('interest__content')) ? 'bottom-bottom' : 'top-middle';
+    const to = (window.innerHeight > window.innerWidth && elem.classList.contains('interest__content')) ? 'bottom-bottom' : 'top-middle';
 
     instances.push(basicScroll.create({
       elem: elem,
@@ -271,7 +271,7 @@ window.onload = function(e){
       props: {
         '--opacity': {
           from: 0,
-          to: .99
+          to: 1
         },
         '--ty': {
           from: ty,
@@ -281,7 +281,6 @@ window.onload = function(e){
     }));
 
   });
-
 
   instances.forEach((instance) => instance.start());
   /* --- end parallax --- */
